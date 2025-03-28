@@ -3,8 +3,8 @@
 # STAR run for multiple demultiplexed samples (R1 and R2)
 
 # user input
-genome_fasta=/home/melanie/net/virus_melanie/maize/annotation/Zm-B73-REFERENCE-NAM-5.0.fa.gz  # Genome fasta file
-genome_gff=/home/melanie/net/virus/melanie/maize/annotation/Zm-B73-REFERENCE-NAM-5.0_Zm00001eb.1.gff3  # GFF annotation file
+genome_fasta=/home/melanie/net/virus_melanie/maize/assembly/Zm-B73-REFERENCE-NAM-5.0.fa.gz  # Genome fasta file
+genome_gff=/home/melanie/net/virus_melanie/maize/annotation/Zm-B73-REFERENCE-NAM-5.0_Zm00001eb.1.gff3  # GFF annotation file
 genome_dir=/home/melanie/net/virus_melanie/maize/annotation/STAR_index  # STAR genome index directory
 output_dir=/home/melanie/net/virus_melanie/maize/results/star_alignment  # Output directory
 STAR=/home/melanie/tools/STAR/STAR-2.7.11a/source/STAR  # STAR executable
