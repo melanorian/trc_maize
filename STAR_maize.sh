@@ -21,7 +21,7 @@ if [ ! -f ${log_file} ]; then
 fi
 
 # Set threads and maximum intron size
-threads=90
+threads=50
 max_intron=900
 
 # Check if genome index already exists
@@ -47,6 +47,9 @@ for sample in /home/melanie/net/virus_melanie/maize/raw_data/demultiplexed/R1/*_
     # Extract sample name from the file (removing the _1.fq.gz part)
     sample_name=$(basename ${sample} "_1.fq.gz")
 
+    # Remove trailing or leading underscores from sample name (if any)
+    sample_name=$(echo ${sample_name} | sed 's/^_//;s/_$//')
+
     # Set the corresponding R1 and R2 file paths
     rnaseq_R1=/home/melanie/net/virus_melanie/maize/raw_data/demultiplexed/R1/${sample_name}_1.fq.gz
     rnaseq_R2=/home/melanie/net/virus_melanie/maize/raw_data/demultiplexed/R2/${sample_name}_2.fq.gz
@@ -60,7 +63,7 @@ for sample in /home/melanie/net/virus_melanie/maize/raw_data/demultiplexed/R1/*_
         --readFilesIn ${rnaseq_R1} ${rnaseq_R2} --readFilesCommand zcat \
         --outSAMtype BAM SortedByCoordinate --outSAMunmapped Within \
         --quantMode GeneCounts --runThreadN ${threads} \
-        --outFileNamePrefix ${output_dir}/${sample_name}_
+        --outFileNamePrefix ${output_dir}/${sample_name}_  # this line
 
         echo "$(date): Finished processing sample ${sample_name}" >> ${log_file}
 
