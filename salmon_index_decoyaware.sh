@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # user input
-output_dir=/net/virus/linuxhome/michael-group/melanie/transcriptomics_timeseries/results/salmon_combined/
-gentrome=/net/virus/linuxhome/michael-group/melanie/transcriptomics_timeseries/raw_data/Salmon_input/MM20231127_Pe1_Sp_gentrom_v2.fa
-decoys=/net/virus/linuxhome/michael-group/melanie/transcriptomics_timeseries/raw_data/Salmon_input/MM20231127_Pe_Sp_decoy.txt
-threads=19
+output_dir=/home/melanie/net/virus_melanie/maize/annotation/salmon_index/
+gentrome=/home/melanie/net/virus_melanie/maize/assembly/Zm-B73-gentrome.fa
+decoys=/home/melanie/net/virus_melanie/maize/assembly/decoys.txt
+threads=50
 
 cd ${output_dir}
 
