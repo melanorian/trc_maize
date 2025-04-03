@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Replace with the actual paths to your directories and index
-output_dir=/home/melanie/net/virus_melanie/maize/results/t3_salmon/salmon_quant  # Output directory for Salmon quantification
+output_dir=/home/melanie/net/virus_melanie/maize/results/t4_all_v1/  # Output directory for Salmon quantification
 R1=/home/melanie/net/virus_melanie/maize/raw_data/demultiplexed/R1  # Path to R1 reads
 R2=/home/melanie/net/virus_melanie/maize/raw_data/demultiplexed/R2  # Path to R2 reads
 index=/home/melanie/net/virus_melanie/maize/annotation/salmon_index/index  # Salmon index directory
